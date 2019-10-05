@@ -11,7 +11,7 @@ import Link from '../Link';
 
 import styles from './styles.css';
 
-function LinkList({ links }) {
+function LinkList({ links, topicName }) {
   const linkNodes = links.map((item) => (
     <Link
       key={item.id}
@@ -21,6 +21,9 @@ function LinkList({ links }) {
 
   return (
     <div className={styles.linkList}>
+      <h1>
+        {topicName}
+      </h1>
       {linkNodes}
     </div>
   );
@@ -34,6 +37,7 @@ LinkList.propTypes = {
       id: PropTypes.string.isRequired,
     })
   ).isRequired,
+  topicName: PropTypes.string.isRequired,
 };
 
 export default LinkList;
