@@ -10,10 +10,12 @@ import {
   REQUEST_TOPICS_SUCCEEDED,
   REQUEST_TOPICS_FAILED,
   SELECT_TOPIC,
+  TOGGLE_DRAWER,
 } from './constants';
 
 const initialState = fromJS({
   topics: [],
+  isDrawerOpen: false,
 });
 
 function navigationContainerReducer(state = initialState, action) {
@@ -25,7 +27,9 @@ function navigationContainerReducer(state = initialState, action) {
     case REQUEST_TOPICS_FAILED:
       return state.set('error', action.message);
     case SELECT_TOPIC:
-      return state.set('selectedTopic', action.topic);
+      return state.set('selectedTopic', action.topic).set('isDrawerOpen', false);
+    case TOGGLE_DRAWER:
+      return state.set('isDrawerOpen', !state.get('isDrawerOpen'));
     default:
       return state;
   }

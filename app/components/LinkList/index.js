@@ -7,14 +7,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Link from '../Link';
 
 import styles from './styles.css';
 
 function LinkList({ links }) {
   const linkNodes = links.map((item) => (
-    <div key={item.id}>
-      {`${item.url} - ${item.description}`}
-    </div>
+    <Link
+      key={item.id}
+      link={item}
+    />
   ));
 
   return (

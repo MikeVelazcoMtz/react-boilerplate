@@ -11,3 +11,5 @@ export const REQUEST_TOPICS_FAILED = 'app/NavigationContainer/REQUEST_TOPICS_FAI
 export const SELECT_TOPIC = 'app/NavigationContainer/SELECT_TOPIC';
 export const SELECT_TOPIC_SUCCEEDED = 'app/NavigationContainer/SELECT_TOPIC_SUCCEEDED';
 export const SELECT_TOPIC_FAILED = 'app/NavigationContainer/SELECT_TOPIC_FAILED';
+
+export const TOGGLE_DRAWER = 'app/NavigationContainer/TOGGLE_DRAWER';
